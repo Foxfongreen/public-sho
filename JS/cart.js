@@ -1,4 +1,5 @@
 
+import { bergenAirConditioners } from "./data.js";
 
 const cartList = document.querySelector(".cart-list");
 const emptyCartTitle = document.querySelector(".empty-cart")
@@ -14,8 +15,13 @@ const availableForm = document.querySelector(".available-form-js")
 const clearCartBtn = document.querySelector(".clear-button")
 const cartInnerWrapper = document.querySelector(".cart-inner-counter")
 
+const addToCartPageBtn = document.querySelector(".item-button") ? document.querySelector(".item-button") : null
+const id = document.querySelector(".good-section")?.dataset.id ? document.querySelector(".good-section").dataset.id : null
+
+
 
 export const cartArr = JSON.parse(localStorage.getItem("cartArr")) || [] 
+console.log(cartArr);
 if(cartArr.length){
     cartInnerWrapper.style.display = "flex"
 }else{
@@ -207,5 +213,56 @@ export function onRemoveBtnClick(event){
         totalCartPrice.classList.remove("show")
         emptyCartTitle.classList.add("show")
         cartArr.length = 0
+        localStorage.removeItem("cartArr")
+        cartInnerWrapper.style.display = "none"
         }
+    
+
+        addToCartPageBtn?.addEventListener("click", onAddToCartClick)
+        function onAddToCartClick(){
+
+            const cartItemObject = bergenAirConditioners.find((item)=>{
+                return item.id === Number(id)
+            })
+            if(cartArr.filter((item)=>{
+                return item.id===cartItemObject.id
+            }).length
+            )
+            {
+                console.log("sdfbg");
+            notificationText.textContent = "Цей товар вже у Вашому кошику"
+            notification.classList.add("fixed")
+            setTimeout(()=>{
+            notification.classList.remove("fixed")
+            }, 3000) 
+            return
+            }
+            cartItemObject.quantity = 1
+            cartArr.push(cartItemObject)
+            localStorage.setItem("cartArr", JSON.stringify(cartArr))
+            const markup = createCartMarkup(cartItemObject)
+            cartList.insertAdjacentHTML("beforeend", markup)
+            cartList.lastElementChild.addEventListener("click",onRemoveBtnClick)
+            cartList.lastElementChild.addEventListener("click",onDecrementBtnClick)
+            cartList.lastElementChild.addEventListener("click",onIncrementBtnClick)
             
+            if(cartArr.length){
+                cartInnerWrapper.style.display = "flex"
+            }else{
+                cartInnerWrapper.style.display = "none"
+            }
+            cartInnerWrapper.textContent = cartArr.length
+            }
+
+// DropDownMenu-Handling
+
+const dropDownBtn = document.querySelector(".dropdown")
+const dropdownMenu = document.querySelector(".dropdown-menu")
+dropDownBtn.addEventListener("mouseover", handleShowDropdown)
+function handleShowDropdown(){
+    dropdownMenu.classList.add("show-dropdown-menu")
+}
+dropDownBtn.addEventListener("mouseout", handleHideDropdown)
+function handleHideDropdown(){
+    dropdownMenu.classList.remove("show-dropdown-menu")
+}

@@ -4,6 +4,7 @@ import { createCartMarkup } from "./cart.js";
 import { onRemoveBtnClick } from "./cart.js"; 
 import { onIncrementBtnClick } from "./cart.js";
 import { onDecrementBtnClick } from "./cart.js";
+const API_KEY = "279f6e42f099a104003dce764d05d9d9"
 const goodsList = document.querySelector(".goods-list");
 const cartList = document.querySelector(".cart-list");
 const emptyCartTitle = document.querySelector(".empty-cart")

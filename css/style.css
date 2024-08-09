@@ -49,6 +49,7 @@ header .container {
     
 }
 .main-menu {
+    position: relative;
     color: white;
     display: flex;
     gap: 24px;
@@ -60,6 +61,49 @@ header .container {
     cursor: pointer;
     border: none;
     background-color: transparent;
+}
+.menu-item-link{
+    color: white;
+
+}
+
+.dropdown{
+    position: absolute;
+    cursor: pointer;
+    left: -90px;
+    z-index: 1222;
+
+}
+
+.dropdown-menu{
+    /* position: absolute; */
+    background-color: white;
+    padding: 16px;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    width: 180px;
+    top: 32px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.149);
+    border-radius: 8px;
+    
+}
+.show-dropdown-menu{
+    display: flex;
+}
+
+.menu-item-link-span{
+    display: inline-block;
+    margin-bottom: 12px;
+}
+
+.dropdown-menu-link{
+    font-size: 18px;
+    color: #e87408;
+    transition: all 0.2s linear;
+}
+.dropdown-menu-link:hover{
+    border-bottom: 1px solid #e87408;
 }
 .cart-inner-counter{
    position: absolute;

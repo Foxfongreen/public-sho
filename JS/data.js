@@ -424,3 +424,7 @@ export const bergenAirConditioners = [
         },
     },
 ];
+
+export const rodaHeatConvectors = [{
+
+}]
