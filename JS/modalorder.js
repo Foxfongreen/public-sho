@@ -112,7 +112,7 @@ if(event.currentTarget.elements.name.value !== "" &&
     event.currentTarget.elements.surname.value !== "" &&
     event.currentTarget.elements.tel.value !== "" &&
     event.currentTarget.elements.email.value !== "" &&
-    event.currentTarget.elements.city.value !== "" &&
+    
     event.currentTarget.elements.department.value !== "" &&
     event.currentTarget.elements.address.value === ""
 ){
@@ -123,8 +123,7 @@ else if(event.currentTarget.elements.name.value !== "" &&
     event.currentTarget.elements.tel.value !== "" &&
     event.currentTarget.elements.email.value !== "" &&
     event.currentTarget.elements.address.value !== "" &&
-    event.currentTarget.elements.department.value === "" &&
-    event.currentTarget.elements.city.value === ""){
+    event.currentTarget.elements.department.value === ""){
         mainOrderBtn.classList.remove("disabled")
     }
     else{
@@ -376,4 +375,181 @@ orderItem.append(orderImage, orderInfoWrapper, removeBtn)
 return orderItem
 }
 
+
+
+
+// NOVA_POSHTA_API
+const BASE_URL = "https://api.novaposhta.ua/v2.0/json/"
+const API_KEY = "279f6e42f099a104003dce764d05d9d9"
+
+
+const locationInput = document.querySelector(".location")
+const locationsListMain = document.querySelector(".locations")
+const addressesList = document.querySelector(".addresses")
+const addressesInput = document.querySelector(".delive-input")
+
+
+modal.addEventListener("click", onModalOrderClick)
+function onModalOrderClick(event){
+if (event.target !== addressesList && event.target !== addressesInput){
+    addressesList.classList.remove("show-addresses")
+
+}
+if (event.target !== locationsListMain && event.target !== locationInput){
+    locationsListMain.classList.remove("show-locations")
+}
+}
+
+addressesInput.addEventListener("focus", onFocussAdressesShow)
+function onFocussAdressesShow(){
+    addressesList.classList.add("show-addresses")
+    addressesList.innerHTML = `<p>Завантаження...</p>`
+    const location = locationInput.value.split(",")[0]
+    getDepartment(BASE_URL, API_KEY, location)
+}
+
+addressesInput.addEventListener("input", onInputAddressesChange)
+function onInputAddressesChange(event){
+    const location = locationInput.value.split(",")[0]
+    getDepartment(BASE_URL, API_KEY, location, event.target.value)
+}
+
+locationsListMain.addEventListener("click", onLocationItemClick)
+    function onLocationItemClick(event){
+        console.log("sdfdgsgfhytjtrdrt");
+    locationInput.value = event.target.textContent
+    locationsListMain.classList.remove("show-locations")
+    const location = locationInput.value.split(",")[0]
+    addressesInput.value = ""
+    getDepartment (BASE_URL, API_KEY, location)
+}
+
+addressesList.addEventListener("click", onAddressesItemClick)
+function onAddressesItemClick(event){
+    if (event.target.tagName === "SPAN"){
+        addressesInput.value = event.target.closest("li").textContent
+
+    }else{
+        addressesInput.value = event.target.textContent
+    }
+    addressesList.classList.remove("show-addresses")
+}
+
+
+locationInput.addEventListener("input", onLocationInputChange)
+function onLocationInputChange(event){
+    getLocation(BASE_URL, API_KEY, event.target.value)
+    if(event.target.value){
+        locationsListMain.classList.add("show-locations")
+    }
+    if(!event.target.value){
+        locationsListMain.classList.remove("show-locations")
+    }
+}
+
+
+function getLocation(url, apiKey, location){
+fetch(url, {
+    method: "POST",
+    headers: {
+        "Content-Type" : "application/json"
+    },
+    body: JSON.stringify({
+        "apiKey": apiKey,
+            "modelName": "AddressGeneral",
+            "calledMethod": "getSettlements",
+            "methodProperties": {
+                "FindByString": location
+            }
+
+    })
+}).then((res)=>{
+    if (!res.ok){
+        throw new Error(res.status)
+    }
+    return res.json()
+}).then((data)=>{
+if(data.data.length === 0){
+    locationsListMain.innerHTML=`<li>Населенний пункт відсутній</li>`
+    return
+}
+let locationList = data.data.reduce((acc, item)=>{
+if (item.Description.toLowerCase().includes(location.toLowerCase())){
+    let string = `${item.Description}, ${item.AreaDescription} область`
+    acc.push(string)
+}
+return acc
+
+},[])
+const markup = locationList.map((item)=>{
+    return `<li class = "location-item">${item}</li>`
+})
+    locationsListMain.innerHTML = markup.join("")
+})
+.catch((error)=>{
+    console.log(error.message);
+})
+}
+
+function getDepartment(url, apiKey, location, search=""){
+fetch(url, {
+    method: "POST",
+    headers: {
+        "Content-Type" : "application/json"
+    },
+    body: JSON.stringify({
+      "apiKey": apiKey,
+            "modelName": "AddressGeneral",
+            "calledMethod": "getWarehouses",
+            "methodProperties": {
+         "CityName" : location,
+    }
+})
+    }).then((res)=>{
+        if (!res.ok){
+            throw new Error(res.status)
+        }
+        return res.json()
+    }).then((data)=>{
+        addressesList.innerHTML = ""
+        if (data.data.length === 0){
+            addressesInput.value = "Відділення відсутнє"
+            addressesList.classList.remove("show-addresses")
+            addressesInput.setAttribute("disabled", "disabled")
+            return
+        }
+        addressesInput.disabled = false
+        const fiteredData = data.data.filter((item)=>{
+            return item.Description.includes("Відділення")
+        })
+        const result = fiteredData.filter((item)=>{
+            return item.Description.toLowerCase().includes(`${search.toLowerCase()}`)
+        })
+        if (!search){
+            const addresses = result.map((item)=>{
+                return`<li class = "addresses-item">${item.Description}</li>`
+            })
+            addressesList.innerHTML = addresses.join("")
+            return
+        }
+        const regExp = new RegExp (`(${search})`, "gi")
+        const res = []
+        result.forEach((item)=>{
+            res.push(item.Description.split(regExp).map((substring)=>{
+                if (substring.toLowerCase() === search.toLocaleLowerCase()){
+                    return `<span class = "orange">${substring}</span>`
+                }return substring
+            }))
+
+        })
+        const resString = res.map(item=>{
+            return `<li>${item}</li>`
+        })
+        addressesList.innerHTML = resString.join(",").replaceAll(",", "")
+    })
+    .catch((error)=>{
+        console.log(error.message);
+    })
+
+}
 

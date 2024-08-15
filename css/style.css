@@ -722,6 +722,85 @@ gap: 4px;
     outline: none;
 }
 
+.location-input-wrapper{
+    position: relative;
+
+}
+.location{
+    width: 434px;
+    height: 36px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+}
+
+.location:focus-within{
+    outline: none;
+}
+
+.locations{
+   display: none;
+   flex-direction: column;
+   gap: 4px;
+   padding: 12px;
+   position: absolute;
+   max-height: 300px;
+   width: 434px;
+   box-shadow:  0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+   background-color: white;
+   z-index: 3000;
+   top: 48px;
+   border-radius: 8px;
+   overflow: scroll;
+   transition: all 0,3s linear;
+   cursor: pointer;
+
+}
+
+.show-locations{
+    display: flex;
+}
+
+.addresses{
+    display: none;
+   flex-direction: column;
+   gap: 4px;
+   padding: 12px;
+   position: absolute;
+   max-height: 300px;
+   width: 434px;
+   box-shadow:  0px 0px 4px 2px rgba(0, 0, 0, 0.1);
+   background-color: white;
+   z-index: 3000;
+   top: 48px;
+   border-radius: 8px;
+   overflow: scroll;
+   transition: all 0,3s linear;
+   cursor: pointer;
+ 
+}
+
+.show-addresses{
+    display: flex;
+}
+
+.addresses-item:hover{
+    background-color: rgb(236, 235 ,235);
+
+}
+
+.orange{
+    background-color: #e87408;
+    color: white;
+}
+
+.location-item:hover{
+    background-color: rgb(236, 235 ,235);
+
+}
+
+
+
 .radio-wrapper{
     display: flex;
     flex-direction: column;
@@ -1078,6 +1157,7 @@ width: 100%;
     
 }
 .deliv-input-wrapper{
+    position: relative;
     height: 53px;
     display: flex;
     flex-direction: column;
@@ -1220,7 +1300,10 @@ box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.206);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 78px;
-    height: 78px;
+    width: 72px;
+    height: 72px;
     padding-bottom: 6px;
+    /* position: absolute;
+    z-index: 700; */
 }
+

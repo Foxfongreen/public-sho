@@ -13,7 +13,7 @@ const totalSlideStep = slideWidth + slideGap
 const totalSliderListLength = sliderList.children.length*slideWidth+((sliderList.children.length-1)*slideGap)
 
 const sliderWIdth = slider.getBoundingClientRect().width
-console.log(sliderWIdth);
+// console.log(sliderWIdth);
 
 sliderPrefBtn.addEventListener("click", onSliderPrefBtnClick)
 function onSliderPrefBtnClick(){

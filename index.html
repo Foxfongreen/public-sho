@@ -28,7 +28,7 @@
                     <ul class="main-menu">
                         <li class="menu-item dropdown"><span class="menu-item-link menu-item-link-span">ТОВАРИ</span>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Кондиціонери</a></li>
+                                <li class="dropdown-menu-item"><a href="/" class="dropdown-menu-link">Кондиціонери</a></li>
                                 <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Конвектори</a></li>
                                 <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Зарядні станціі</a></li>
                                 <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Генератори</a></li>
@@ -135,13 +135,23 @@
                             <label for="dep" class="order-lable">Доставка у відділення Нової Пошти</label>
                         </div>
                     <div class="delivery-wrapper-dept">
-                        <div class="deliv-input-wrapper">
+                        <!-- <div class="deliv-input-wrapper">
                             <input class="delive-input" placeholder="Введіть населенний пункт" name="city" type="text" type="text">
                             <p class="error">* Обовʼязкове поле</p>
                         </div>
                         <div class="deliv-input-wrapper">
                             <input class="delive-input" placeholder="Введіть номер відділення" name="department" type="text" type="text">
                             <p class="error">* Обовʼязкове поле</p>
+                        </div> -->
+
+                        <div class="location-input-wrapper">
+                            <input name="city" type="text" class="location" placeholder="Введіть населенний пукт">
+                            <ul class="locations"></ul>
+                        </div>
+
+                        <div class="deliv-input-wrapper">
+                            <input name="department" type="text" class="delive-input" placeholder="Введіть номер або адресу відділення">
+                            <ul class="addresses"></ul>
                         </div>
                     </div>
                 </div>
@@ -409,6 +419,8 @@
         <script src="./JS/form.js" type="module"></script>
         <script src="./JS/category-slider.js" type="module"></script>
         <script src="./JS/api.js" type="module"></script>
+        <script src="./JS/novaformAPI.js" type="module"></script>
+
 
 
 

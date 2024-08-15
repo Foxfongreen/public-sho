@@ -21,7 +21,7 @@ const id = document.querySelector(".good-section")?.dataset.id ? document.queryS
 
 
 export const cartArr = JSON.parse(localStorage.getItem("cartArr")) || [] 
-console.log(cartArr);
+// console.log(cartArr);
 if(cartArr.length){
     cartInnerWrapper.style.display = "flex"
 }else{

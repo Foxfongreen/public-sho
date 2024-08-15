@@ -16,13 +16,33 @@
     <body>
         <header>
             <div class="container">
-                <a href="/" class="logo">SHO-TREBA</a>
+              
+                <a href="/" class="">
+                    <svg class="icon-logo-sho">menu-item-link
+                        <use href="images/sprite.svg#icon-logo-sho-expand-white--treba"></use>
+                    </svg>
+                    
+                </a>
                 <nav class="navigation">
                     <ul class="main-menu">
-                        <li class="menu-item">ТОВАРИ</li>
-                        <li class="menu-item">ПРО НАС</li>
-                        <li class="menu-item">КОНТАКТИ</li>
-                        <li class="menu-item">ОПЛАТА ТА ДОСТАВКА</li>
+                        <li class="menu-item dropdown"><span class="menu-item-link menu-item-link-span">ТОВАРИ</span>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Кондиціонери</a></li>
+                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Конвектори</a></li>
+                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Зарядні станціі</a></li>
+                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Генератори</a></li>
+                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Бойлери</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-item-link" href="./contactPage.html">ПРО НАС</a>
+                        </li>
+                        <li class="menu-item">
+                            <a class="menu-item-link" href="./contactPage.html">КОНТАКТИ</a>
+                        </li>
+                        <li class="menu-item">  
+                            <a class="menu-item-link" href="./paymentPage.html">ОПЛАТА ТА ДОСТАВКА</a>
+                        </li>
                     </ul>
                 </nav>
                 <button class="cart-button">
@@ -31,6 +51,26 @@
                         <use href="images/sprite.svg#icon-cart"></use>
                     </svg>
                 </button>
+                <button type="button" class="contact-us">
+                    <svg class="contact-us-icon" width="32" , height="32">
+                        <use href="images/sprite.svg#icon-phone"></use>
+                    </svg>
+                </button>
+                <form class="contact-us-form">
+                    <div class="contact-form-inputs-wrapper">
+                        <div class="contact-us-input-wrapper">
+                            <input type="text" placeholder="Імʼя" name="name" class="contact-us-name-input">
+                            <p class="error-contact-us">* Обовʼязкове поле</p>
+                        </div>
+                        <div class="contact-us-input-wrapper">
+                            <input type="text" placeholder="Телефон" name="phone" class="contact-us-phone-input">
+                            <p class="error-contact-us">* Обовʼязкове поле</p>
+                        </div>
+                        <textarea class="contact-us-textarea" name="question" id="" placeholder="Ваше питання"></textarea>
+                    </div>
+                    <button class="contact-us-submite-btn disabled" type="submit">Передзвонити</button>
+                    <button type="button" class="contact-us-form-close-btn">&#x2717</button>
+                </form>
             </div>
         </header>
         <main>
