@@ -9,11 +9,14 @@ let step = 0
 let offset = 0
 
 function draw(){
+    let li = document.createElement("li")
+    li.classList.add("slider-item")
     let img = document.createElement("img")
     img.src = slider[step]
-    img.classList.add("slider-item")
+    img.classList.add("slider-img")
     img.style.opacity = 1
-    document.querySelector(".slider-list").appendChild(img)
+    li.appendChild(img)
+    document.querySelector(".slider-list").appendChild(li)
     if (step + 1 === slider.length){
         step = 0
     }else{

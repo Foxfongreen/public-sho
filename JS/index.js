@@ -312,6 +312,11 @@ function onFilterSquareChange(event){
   }
   const markup = createMarkup(filteredArr).join("")
   goodsList.innerHTML = markup
+
+const cartButtons = document.querySelectorAll(".to-cart");
+  cartButtons.forEach((button) => {
+    button.addEventListener("click", onAddToCartClick);
+});
 }
 
 filterForm.addEventListener("submit", onFilterSquareSubmit)
@@ -339,6 +344,10 @@ function onFilterPowerChange (event){
     }
     const markup = createMarkup(filteredArr).join("")
     goodsList.innerHTML = markup
+    const cartButtons = document.querySelectorAll(".to-cart");
+  cartButtons.forEach((button) => {
+    button.addEventListener("click", onAddToCartClick);
+});
 }
 filterPowerForm.addEventListener("submit", onFilterPowerSubmit)
 function onFilterPowerSubmit(event){
@@ -346,6 +355,10 @@ function onFilterPowerSubmit(event){
 event.currentTarget.reset()
 const markup = availableForm.elements[0].checked ? createMarkup(bergenAirConditioners).join("") : createMarkup(availableArr).join("")
 goodsList.innerHTML = markup
+const cartButtons = document.querySelectorAll(".to-cart");
+  cartButtons.forEach((button) => {
+    button.addEventListener("click", onAddToCartClick);
+});
 }
 ////////////////////filterPowerForm
 // ----------------------
@@ -401,6 +414,10 @@ function onAvailableFormChange (event){
         }
        
     }
+    const cartButtons = document.querySelectorAll(".to-cart");
+  cartButtons.forEach((button) => {
+    button.addEventListener("click", onAddToCartClick);
+});
 }
 ////////////////////availableForm
 

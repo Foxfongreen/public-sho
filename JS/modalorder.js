@@ -102,11 +102,11 @@ function onInputChange(event){
 if(event.target.value.length>=1){
     event.target.style.borderColor = "green"
     event.target.style.backgroundColor = "rgba(0, 128, 0, 0.06)"
-    event.target.nextElementSibling.classList.remove("show-error")
+    // event.target.nextElementSibling.classList.remove("show-error")
 }else {
     event.target.style.borderColor = "red"
     event.target.style.backgroundColor = "rgba(255, 0, 0, 0.06)"
-    event.target.nextElementSibling.classList.add("show-error")
+    // event.target.nextElementSibling.classList.add("show-error")
 }
 if(event.currentTarget.elements.name.value !== "" && 
     event.currentTarget.elements.surname.value !== "" &&
@@ -443,6 +443,7 @@ function onLocationInputChange(event){
         locationsListMain.classList.add("show-locations")
     }
     if(!event.target.value){
+        console.log("99999999");
         locationsListMain.classList.remove("show-locations")
     }
 }
