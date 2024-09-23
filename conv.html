@@ -19,7 +19,7 @@
               
                 <a href="/" class="">
                     <svg class="icon-logo-sho">menu-item-link
-                        <use href="images/sprite.svg#icon-logo-sho-expand-white--treba"></use>
+                        <use href="images/sprite.svg#icon--3"></use>
                     </svg>
                     
                 </a>
@@ -27,15 +27,15 @@
                     <ul class="main-menu">
                         <li class="menu-item dropdown"><span class="menu-item-link menu-item-link-span">ТОВАРИ</span>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Кондиціонери</a></li>
-                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Конвектори</a></li>
-                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Зарядні станціі</a></li>
-                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Генератори</a></li>
-                                <li class="dropdown-menu-item"><a href="" class="dropdown-menu-link">Бойлери</a></li>
+                                <li class="dropdown-menu-item"><a href="./cond.html" class="dropdown-menu-link">Кондиціонери</a></li>
+                                <li class="dropdown-menu-item"><a href="./conv.html" class="dropdown-menu-link">Конвектори</a></li>
+                                <li class="dropdown-menu-item"><a href="./electrostation.html" class="dropdown-menu-link">Зарядні станціі</a></li>
+                                <li class="dropdown-menu-item"><a href="./generator.html" class="dropdown-menu-link">Генератори</a></li>
+                                <li class="dropdown-menu-item"><a href="./boiler.html" class="dropdown-menu-link">Бойлери</a></li>
                             </ul>
                         </li>
                         <li class="menu-item">
-                            <a class="menu-item-link" href="./contactPage.html">ПРО НАС</a>
+                            <a class="menu-item-link" href="./aboutPage.html">ПРО НАС</a>
                         </li>
                         <li class="menu-item">
                             <a class="menu-item-link" href="./contactPage.html">КОНТАКТИ</a>
@@ -165,8 +165,7 @@
                     </div>
                         
                 </div>
-                </fieldset>
-              </div>
+                </fieldset>              </div>
                     <button class="order-submit-btn disabled" type="submit">Оформити</button>
                     </form>
                     <div class="order-list-wrapper">
@@ -209,8 +208,6 @@
                                 </h2>
                                 <p class="day-price">15999₴</p>
                             </a>
-                        
-                            
                         </div>
                         <div class="slider">
                             <ul class="slider-list">
@@ -238,27 +235,177 @@
                                     alt="небо"
                                 />
                                 </li>
-                              
+                         
                             </ul>
                         </div>
                     </div>
                   
                 </div>
             </section>
-
+            <section class="goods">
+                <div class="bread-crumbs-wrapper">
+                    <ul class="bread-crumbs-list">
+                        <li class="bread-crumbs-item"><a href="./index.html" class="bread-crumbs-item-link">Головна</a></li>
+                        <li class="bread-crumbs-item bread-crumb-second"><span>></span><p href="" class="bread-crumbs-item-text">Кондиціонери</p></li>
+                    </ul>
+                </div>
+                <div class="container">
+                   
+                    <ul class="goods-list">
+                      
+                    </ul>
+                    <div class="filter-calc">
+                        <h2 class="filter-available-title">Наявність:
+                        </h2>
+                        <form action="" class="available-form-js">
+                            <div class="input-wrapper">
+                                <div class="input-radio-wrapper">
+                                    <input checked type="radio" name="available" id="all" value="all" class="input">
+                                </div>
+                                <label for="all" class="lable">Всі</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="available" id="available" value="available" class="input">
+                                <label for="available" class="lable">Є у наявності</label>
+                            </div>
+                        </form>
+                        <h2 class="filter-square-title">Рекомендована площа приміщення, м<sup>2</sup>:
+                        </h2>
+                        <form action="" class="filter-form">
+                            <div class="input-wrapper">
+                                <input type="radio" name="square" id="square-20" value="20" class="input">
+                                <label for="square-20" class="lable">До 20 м<sup>2</sup></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="square" id="square-25" value="25" class="input">
+                                <label for="square-25" class="lable">До 25 м<sup>2</sup></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="square" id="square-35" value="35" class="input">
+                                <label for="square-35" class="lable">До 35 м<sup>2</sup></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="square" id="square-52" value="52" class="input">
+                                <label for="square-52" class="lable">До 52 м<sup>2</sup></label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="square" id="square-70" value="70" class="input">
+                                <label for="square-70" class="lable">До 70 м<sup>2</sup></label>
+                            </div>
+                         <button type="submit" class ="clear-filter">Очистити фільтр</button>
+                        </form>
+                        <h2 class="filter-power-title">Потужність, БТО/год:
+                        </h2>
+                        <form action="" class="filter-form power-form-js">
+                            <div class="input-wrapper">
+                                <input type="radio" name="power" id="power-7000" value="7000" class="input">
+                                <label for="power-7000" class="lable">7000</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="power" id="power-9000" value="9000" class="input">
+                                <label for="power-9000" class="lable">9000</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="power" id="power-11450" value="11450" class="input">
+                                <label for="power-11450" class="lable">11450</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="power" id="power-18000" value="18000" class="input">
+                                <label for="power-18000" class="lable">18000</label>
+                            </div>
+                            <div class="input-wrapper">
+                                <input type="radio" name="power" id="power-24000" value="24000" class="input">
+                                <label for="power-24000" class="lable">24000</label>
+                            </div>
+                         <button type="submit" class ="clear-filter">Очистити фільтр</button>
+                        </form>
+                        
+                    </div>
+                   
+                </div>
+            </section>
             
         </main>
         <footer>
             <div class="container">
-                <a href="/" class="logo">SHO-TREBA</a>
-                <nav class="navigation">
+                <a href="/" class="logo">
+                    <svg class="footer-icon-logo-sho">menu-item-link
+                        <use href="images/sprite.svg#icon--3"></use>
+                    </svg>
+                </a>
+                <nav class="navigation footer-navigation">
+                    <h2 class="foopter-nav-title">ТОВАРИ</h2>
                     <ul class="main-menu main-menu-footer">
-                        <li class="menu-item">ТОВАРИ</li>
-                        <li class="menu-item">ПРО НАС</li>
-                        <li class="menu-item">КОНТАКТИ</li>
-                        <li class="menu-item">ОПЛАТА ТА ДОСТАВКА</li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./cond.html">Кондиціонери</a></li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./conv.html">Конвектори</a></li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./electrostation.html">Зарядні станції</a></li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./boiler.html">Бойлери</a></li>
                     </ul>
                 </nav>
+                <nav class="navigation footer-navigation">
+                    <h2 class="foopter-nav-title">ІНФОРМАЦІЯ</h2>
+                    <ul class="info-menu-footer">
+                        <li class="menu-item"><a class="footer-menu-link" href="./aboutPage.html">Про нас</a></li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./paymentPage.html">Оплата і доставка</a></li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./manuals.html">Мануали</a></li>
+                        <li class="menu-item"><a class="footer-menu-link" href="./service.html">Сервісні центри</a></li>
+                       
+                    </ul>
+                </nav>
+                <div class="contact-footer-wrapper">
+                    <h2 class="contact-footer-title"></h2>                        <ul class="contact-list">
+
+                            <li class="contact-item">
+                                 <svg class="icon-contact-logo icon-phone">menu-item-link
+                                    <use href="images/sprite.svg#icon-phone"></use>
+                                </svg>
+                            <a href="tel:+380442322036" class="contact-link">+38(044)232-20-36</a></li>
+                            <li class="contact-item">
+                                <svg class="icon-contact-logo icon-phone">menu-item-link
+                                    <use href="images/sprite.svg#icon-phone"></use>
+                                </svg>
+                                <a href="tel:+380680650128" class="contact-link">+38(068)065-01-28</a></li>
+                            <li class="contact-item">
+                                <svg class="icon-contact-logo icon-phone">menu-item-link
+                                    <use href="images/sprite.svg#icon-phone"></use>
+                                </svg>
+                                <a href="tel:+380951036604" class="contact-link">+38(095)103-66-04</a></li>
+                                <li class="contact-item">
+                                    <svg class="icon-contact-logo icon-phone">menu-item-link
+                                        <use href="images/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                    <a href="tel:+380951036604" class="contact-link">+38(095)103-66-04</a></li>
+                            
+
+                        </ul>
+                </div>
+                <div class="contact-footer-wrapper">
+                    <h2 class="contact-footer-title"></h2>                        <ul class="contact-list">
+
+                            <li class="contact-item">
+                                <svg class="icon-contact-logo icon-whatsap">menu-item-link
+                                    <use href="images/sprite.svg#icon-whatsapp"></use>
+                                </svg>
+                                <a href="tel:+380951036604" class="contact-link">WhatsApp</a></li>
+                            <li class="contact-item">
+                                <svg class="icon-contact-logo icon-viber">menu-item-link
+                                    <use href="images/sprite.svg#icon-viber"></use>
+                                </svg>
+                                <a href="tel:+380680650128" class="contact-link">Viber</a></li>
+                            <li class="contact-item">
+                                <svg class="icon-contact-logo icon-telegram">menu-item-link
+                                    <use href="images/sprite.svg#icon-telegram"></use>
+                                </svg>
+                                <a href="t/me/@sho_treba" class="contact-link">t/me/@sho_treba</a></li>
+                            <li class="contact-item">
+                                <svg class="icon-contact-logo icon-envelope">menu-item-link
+                                    <use href="images/sprite.svg#icon-envelope"></use>
+                                </svg>
+                                <a href="mailto:sales@sho-treba.com.ua" class="contact-link">sales@sho-treba.com.ua</a></li>
+
+                        </ul>
+                </div>
+             
                 <!-- <button class="cart-button">
                     <svg class="cart-icon" width="24" , height="24">
                         <use href="images/sprite.svg#icon-cart"></use>
@@ -266,7 +413,8 @@
                 </button> -->
             </div>
         </footer>
-        <!-- <script src="./index.js" type="module"></script> -->
+        <script src="./JS/cart.js" type="module"></script>
+        <script src="./JS/index.js" type="module"></script>
         <script src="./JS/modal.js" type="module"></script>
         <script src="./JS/modalorder.js" type="module"></script>
         <script src="./JS/slider.js" type="module"></script>

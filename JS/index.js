@@ -433,50 +433,50 @@ function onAvailableFormChange (event){
 
 
 // Cocntact-form open/close
-const contactUsButton = document.querySelector(".contact-us")
-const contactUsForm = document.querySelector(".contact-us-form")
-const contactUsFormCloseBtn = document.querySelector(".contact-us-form-close-btn")
-const contactUsSubmitBtn = document.querySelector(".contact-us-submite-btn")
-contactUsFormCloseBtn.addEventListener("click", onClosecontactUsButtonClick)
+// const contactUsButton = document.querySelector(".contact-us")
+// const contactUsForm = document.querySelector(".contact-us-form")
+// const contactUsFormCloseBtn = document.querySelector(".contact-us-form-close-btn")
+// const contactUsSubmitBtn = document.querySelector(".contact-us-submite-btn")
+// contactUsFormCloseBtn.addEventListener("click", onClosecontactUsButtonClick)
 
 
-contactUsForm.addEventListener("submit", onContactUsFormSubmit)
-function onContactUsFormSubmit(event){
-event.preventDefault()
-onClosecontactUsButtonClick()
-}
+// contactUsForm.addEventListener("submit", onContactUsFormSubmit)
+// function onContactUsFormSubmit(event){
+// event.preventDefault()
+// onClosecontactUsButtonClick()
+// }
 
-contactUsButton.addEventListener("click", onClosecontactUsButtonClick)
+// contactUsButton.addEventListener("click", onClosecontactUsButtonClick)
 
-function onClosecontactUsButtonClick(){
-    if (contactUsForm.classList.contains("show-contact-us-form")){
-        contactUsForm.classList.remove("show-contact-us-form")
-    }else {
-        contactUsForm.classList.add("show-contact-us-form")
-    }
-}
+// function onClosecontactUsButtonClick(){
+//     if (contactUsForm.classList.contains("show-contact-us-form")){
+//         contactUsForm.classList.remove("show-contact-us-form")
+//     }else {
+//         contactUsForm.classList.add("show-contact-us-form")
+//     }
+// }
 
-contactUsForm.addEventListener("input", onContactUsFormInputChange)
+// contactUsForm.addEventListener("input", onContactUsFormInputChange)
 
-function onContactUsFormInputChange(event){
-    console.log(event.target.name);
-    if(event.target.value.length>=1 && event.target.name !== "question"){
+// function onContactUsFormInputChange(event){
+//     console.log(event.target.name);
+//     if(event.target.value.length>=1 && event.target.name !== "question"){
         
-        // event.target.style.borderColor = "red"
-        event.target.style.backgroundColor = "rgb(255, 253, 207)"
-        event.target.nextElementSibling.classList.remove("show-error")
-    }else if(event.target.value.length===0 && event.target.name !== "question") {
-        // event.target.style.borderColor = "red"
-        event.target.style.backgroundColor = "rgba(173, 106, 106, 0.68)"
-        event.target.nextElementSibling.classList.add("show-error")
-    }
-    if(event.currentTarget.elements.name.value !=="" &&
-        event.currentTarget.elements.phone.value !==""
-    ){
-        contactUsSubmitBtn.classList.remove("disabled")
-    }else{
-        contactUsSubmitBtn.classList.add("disabled")
-    }
-}
+//         // event.target.style.borderColor = "red"
+//         event.target.style.backgroundColor = "rgb(255, 253, 207)"
+//         event.target.nextElementSibling.classList.remove("show-error")
+//     }else if(event.target.value.length===0 && event.target.name !== "question") {
+//         // event.target.style.borderColor = "red"
+//         event.target.style.backgroundColor = "rgba(173, 106, 106, 0.68)"
+//         event.target.nextElementSibling.classList.add("show-error")
+//     }
+//     if(event.currentTarget.elements.name.value !=="" &&
+//         event.currentTarget.elements.phone.value !==""
+//     ){
+//         contactUsSubmitBtn.classList.remove("disabled")
+//     }else{
+//         contactUsSubmitBtn.classList.add("disabled")
+//     }
+// }
 
 // Cocntact-form open/close

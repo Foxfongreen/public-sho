@@ -29,13 +29,53 @@ a {
 img {
     display: block;
 }
+
+
+
+/* mobile */
+@media screen and (max-width:480px){
+    .mobile-menu-burger{
+        display: block;
+
+    }
+    .navigation{
+        display: none;
+    }
+    .mobile-none{
+        display: none;
+    }
+    header .container{
+        max-width: 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .cart-button{
+        display: none;
+    }
+}
+
+.mobile-menu-burger{
+    display: none;
+}
+.cart-icon{
+
+}
+
+/* mobile */
+
+
+
+
+
 header {
     /* position: fixed; */
-    position: relative;
-    padding: 12px 0px;
+    padding: 32px 0px;
     background-color: #b68918;
     background: linear-gradient(to right, #e87408, #e87408);
     box-shadow: 0px 0px 4px 2px rgba(245, 222, 179, 1);
+}
+.navigation{
+    margin-left: 164px;
 }
 .container {
     width: 1320px;
@@ -43,6 +83,7 @@ header {
     
 }
 header .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -68,6 +109,7 @@ header .container {
 }
 
 .dropdown{
+    width: 64px;
     position: absolute;
     cursor: pointer;
     left: -90px;
@@ -77,6 +119,7 @@ header .container {
 
 .dropdown-menu{
     position: relative;
+    /* left: -100px; */
     background-color: white;
     padding: 16px;
     display: none;
@@ -641,6 +684,10 @@ flex-direction: column;
     justify-content: space-between;
     width: 636px;
 }
+
+/* FOOTER */
+
+
 footer{
     
     background-color: #e87408;
@@ -648,14 +695,45 @@ footer{
 }
 footer .container{
     display: flex;
-    gap: 104px;
+    justify-content: space-between;
+    /* gap: 104px; */
 
 }
-.main-menu-footer{
+.main-menu-footer, .info-menu-footer{
     display: flex;
     flex-direction: column;
+    gap: 8px;
+    
+
     
 }
+.footer-icon-logo-sho{
+    width: 120px;
+}
+.foopter-nav-title{
+color: white;
+margin-bottom: 12px;
+}
+.footer-menu-link{
+    color: white;
+ 
+}
+.footer-navigation{
+    margin-left: 0;
+    width: 200px;
+}
+footer .contact-link{
+    color: white;
+    font-size: 16px;
+}
+footer .icon-phone{
+    fill: rgb(172, 163, 163);
+}
+footer .icon-envelope{
+    fill: rgb(172, 163, 163);
+}
+/* FOOTER */
+
 .backdrop-order{
     position: fixed;
     top: 0;
@@ -1168,10 +1246,7 @@ width: 100%;
     flex-direction: column;
     gap: 4px;
 }
-.show-error{
-    display: block;
 
-}
 .disabled{
     opacity: 0.5;
     pointer-events: none;
@@ -1303,12 +1378,210 @@ box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.206);
 
 .icon-logo-sho{
     display: flex;
+    position: absolute;
     justify-content: center;
     align-items: center;
-    width: 72px;
-    height: 72px;
+    width: 120px;
+    height: 120px;
+    left: 0;
+    top: -45px;
     /* padding-bottom: 6px; */
     /* position: absolute;
     z-index: 700; */
 }
+
+/* Contact-page */
+.contacts{
+    padding: 24px 0px 48px;
+    
+}
+.contacts .container{
+    display: flex;
+    gap: 128px;
+    
+}
+
+.contact-title{
+    font-size: 36px;
+    color: black;
+    margin-bottom: 24px;
+}
+
+.icon-contact-logo{
+    
+    width: 24px;
+    height: 24px;
+
+}
+
+.contact-list{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    
+}
+
+.contact-link{
+    color: rgb(35, 32, 32);
+    font-size: 20px;
+}
+
+.icon-whatsap{
+    fill: RGB(37, 211, 102);
+}
+.icon-telegram{
+    fill: RGB(0, 136, 204);
+}
+
+.icon-envelope{
+    fill: rgb(142, 124, 124);
+}
+.icon-phone{
+    fill: rgb(142, 124, 124);
+}
+
+.contact-page-form-wrapper-title{
+    font-size: 36px;
+    margin-bottom: 20px;
+
+
+}
+.contact-page-form-wrapper-title-text{
+    font-size: 24px;
+
+}
+.contact-page-contact-us-form{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-right: 24px;
+
+}
+.contact-page-contact-form-inputs-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+}
+
+.contact-page-contact-us-name-input, .contact-page-contact-us-phone-input{
+    width: 420px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.216);
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 4px;
+
+
+}
+
+.contact-page-contact-us-name-input:focus-within,
+.contact-page-contact-us-phone-input:focus-within,
+.contact-page-contact-us-textarea:focus-within{
+    outline: none;
+}
+.contact-page-error-contact-us{
+    display: none;
+    color: red;
+}
+
+.contact-page-contact-us-textarea{
+    width: 420px;
+    height: 160px;
+    border: 1px solid rgba(0, 0, 0, 0.216);
+    border-radius: 8px;
+    padding: 12px;
+    resize: none;
+}
+
+.contact-page-contact-us-submite-btn{
+    padding: 16px;
+    width: 160px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    background-color: #e87408;
+    cursor: pointer;
+}
+/* Contact-page */
+
+
+
+.show-error{
+    display: block;
+
+}
+
+.contact-page-contact-us-input-wrapper{
+    height: 62px;
+}
+
+
+
+.delivery-text-wrapper{
+    width: 1320px;
+}
+
+/* about-us-page */
+.about-us-section{
+    padding-bottom: 48px;
+}
+.about-us-title{
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+.about-text{
+    font-size: 20px;
+    line-height: 1.4;
+    /* text-indent: 32px; */
+}
+
+/* about-us-page */
+
+/* payment-deliwery */
+.delivery-text-title{
+    margin-bottom: 12px;
+    font-size: 28px;
+}
+.delivery-text-subtitle{
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+.delivery-list{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 18px;
+    margin-left: 64px;
+    margin-bottom: 12px;
+}
+.payment-subsubtitle-text{
+    text-indent: 48px;
+    font-size: 18px;
+    margin-bottom: 4px;
+    
+}
+.payment-text-subsubtitle{
+    margin-left: 48px;
+    margin-bottom: 4px;
+}
+.delivery-item{
+    list-style-type: disc;
+
+}
+.text-small{
+   
+    margin-bottom: 48px;
+}
+
+/* payment-deliwery */
+
 
