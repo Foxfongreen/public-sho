@@ -399,6 +399,7 @@ img {
         width: 200px;
         height: 270px;
         border: 1px solid black;
+        margin: 0 auto;
     }
     .day-title-model {
         font-size: 12px;
@@ -436,6 +437,7 @@ img {
         border: none;
     }
     .slider {
+        display: none;
         position: relative;
         transform: translateX(2000px);
         animation-name: showSlider;
@@ -1329,21 +1331,28 @@ img {
         
     }
     /* category-section */
-    
+    .category-list-mobile{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 300px;
+        margin: 0 auto;
+    }
     
     .category{
         padding-bottom: 48px;
     }
     .category .container{
-        display: flex;
+        display: none;
         align-items: center;
     }
+
     .category-list{
         display: flex;
         height: 368px;
         padding-top: 2px;
+        gap: 44px;
         padding-left: 6px;
-        gap: 36px;
         transition: all 0.3s linear;
     
     }
@@ -1352,6 +1361,13 @@ img {
      border-radius: 8px;
      transition: all 0.1s linear;
      height: 360px;
+    }
+
+    .category-item-mobile{
+        padding: 12px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 6px 2px rgb(0, 0, 0, 0.2);
+        
     }
     
     .category-item:hover{
@@ -1363,7 +1379,8 @@ img {
     color: black;
     }
     .category-item-img{
-    
+    width: 260px;
+    height: 260px;
     }
     
     .category-item-title{
@@ -1404,13 +1421,15 @@ img {
     }
     /* Slider */
     .category-list-slider{
+        display: none;
     height: 380px;
-    width: 1228px;
+    width: 280px;
     overflow: hidden;
     display: flex;
     align-items: center;
     padding-right: 6px;
     padding-left: 6px;
+    margin: 0 auto;
     
     }
     .slider-prev-button, .slider-next-button{
@@ -1659,6 +1678,12 @@ img {
 
 
 @media screen and (min-width:481px){
+    .mobile-menu-burger{
+        display: none;
+    }
+    .mobile-menu-button{
+        display: none;
+    }
     header {
         /* position: fixed; */
         padding: 32px 0px;
@@ -2872,6 +2897,9 @@ img {
         display: flex;
         align-items: center;
     }
+    .category .container-mobile{
+        display: none;
+    }
     .category-list{
         display: flex;
         height: 368px;
@@ -2937,7 +2965,9 @@ img {
         color: rgb(100, 97, 97);
     }
     /* Slider */
+    
     .category-list-slider{
+        display: block;
     height: 380px;
     width: 1228px;
     overflow: hidden;
