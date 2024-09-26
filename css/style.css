@@ -258,8 +258,13 @@ img {
         animation-duration: 1s;
         animation-fill-mode: forwards;
         animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+        margin-bottom: 24px;
         }
-    
+    .good-of-day{
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
+    }
     @keyframes showGoodOfDay{
         0%{
             transform: translateX(-700px);
@@ -396,8 +401,8 @@ img {
         height: 1024px;
     }
     .good-of-day-wrapper {
-        width: 200px;
-        height: 270px;
+        width: 300px;
+        height: 360px;
         border: 1px solid black;
         margin: 0 auto;
     }
@@ -408,6 +413,7 @@ img {
         /* word-break: break-all; */
         width: 300px;
         max-width: 190px;
+        margin-left: 24px;
     }
     .day-title-model-name {
         font-size: 13px;
@@ -421,6 +427,7 @@ img {
     .day-price {
         padding-left: 16px;
         max-width: 190px;
+        margin-left: 24px;
     }
     .day-link {
         color: black;
@@ -765,6 +772,9 @@ img {
     }
     footer .container{
         display: flex;
+        align-items: center;
+        
+        flex-direction: column;
         justify-content: space-between;
         /* gap: 104px; */
     
@@ -1500,9 +1510,11 @@ img {
     }
     
     .contact-list{
+        align-items: center;
         display: flex;
         flex-direction: column;
         gap: 12px;
+        margin-bottom: 24px;
     }
     
     .contact-item{
