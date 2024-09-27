@@ -774,11 +774,13 @@ img {
         font-size: 18px;
         color: rgba(61, 58, 58, 0.837);
         margin-left: 8px;
+        text-decoration: underline;
     }
     .available-wrapper{
         display: flex;
         justify-content: space-between;
-        width: 636px;
+        align-items: center;
+        /* width: 636px; */
     }
     
     /* FOOTER */
