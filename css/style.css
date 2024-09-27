@@ -157,6 +157,12 @@ img {
         align-items: center;
         
     }
+    .good-section .container{
+        max-width: 450px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin: 0 auto;
+    }
     .main-menu {
         position: relative;
         color: white;
@@ -373,6 +379,8 @@ img {
     }
     .goods .container {
         display: flex;
+      
+        
     }
     .item-button:hover{
         box-shadow: 0 0 4px 2px #e87408;
@@ -407,16 +415,16 @@ img {
         margin: 0 auto;
     }
     .day-title-model {
-        font-size: 12px;
+        font-size: 16px;
         padding-left: 16px;
         margin-bottom: 8px;
         /* word-break: break-all; */
         width: 300px;
-        max-width: 190px;
+        max-width: 240px;
         margin-left: 24px;
     }
     .day-title-model-name {
-        font-size: 13px;
+        font-size: 16px;
         max-width: 190px;
     }
     .day-min-tec-spec {
@@ -425,6 +433,7 @@ img {
         max-width: 190px;
     }
     .day-price {
+        font-size: 20px;
         padding-left: 16px;
         max-width: 190px;
         margin-left: 24px;
@@ -676,14 +685,22 @@ img {
         cursor: pointer;
     }
     .good-section {
-        padding: 48px 0px;
+        padding: 12px 0px 24px;
     
        
     }
     .good-wrapper{
-        padding-top: 48px;
+        padding-top: 0px;
         display: flex;
-        gap: 72px;
+        flex-direction: column;
+        gap: 24px;
+    }
+    .good-img{
+        width: 280px;
+        height: 280px;
+        margin: 0 auto;
+        
+
     }
     
     .table-capture{
@@ -696,6 +713,7 @@ img {
         width: 500px;
         text-align: start;
         padding: 8px 0px;
+        padding-right: 16px;
     }
     .table-data{
         padding: 8px 0px;
@@ -705,7 +723,7 @@ img {
     }
     .good-price{
         display: inline-block;
-        font-size: 40px;
+        font-size: 32px;
         color: rgba(61, 58, 58, 0.837);
         font-weight: 600;
         margin-right: 24px;
@@ -718,6 +736,7 @@ img {
         margin-top: 24px;
         display: flex;
         align-items: center;
+        justify-content: space-between;
        
     }
     
@@ -768,7 +787,7 @@ img {
     footer{
         
         background-color: #e87408;
-        padding: 48px 0px;
+        padding: 24px 0px 48px;
     }
     footer .container{
         display: flex;
@@ -804,13 +823,13 @@ img {
     }
     footer .contact-link{
         color: white;
-        font-size: 16px;
+        font-size: 24px;
     }
     footer .icon-phone{
-        fill: rgb(172, 163, 163);
+        fill: rgb(250, 247, 247);
     }
     footer .icon-envelope{
-        fill: rgb(172, 163, 163);
+        fill: rgb(252, 249, 249);
     }
     /* FOOTER */
     
@@ -1407,16 +1426,17 @@ img {
     /* Bread-Crubs */
     .bread-crumbs-list{
         display:flex;
+        flex-direction: column;
         gap: 12px;
-        width: 1320px;
         margin: 0 auto;
+        margin: 24px;
     
     }
     
     .bread-crumb-second{
         display: flex;
         gap: 12px;
-        padding-bottom: 24px;
+        padding-bottom: 0px;
     }
     
     .bread-crumbs-item-link{
