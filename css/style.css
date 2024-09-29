@@ -499,9 +499,10 @@ img {
         padding: 24px;
         position: relative;
         max-width: 340px;
-        height: 600px;
+        height: 535px;
         background-color: white;
-        padding-left: 36px;
+        padding-left: 16px;
+        padding-right: 16px;
         padding-top: 48px;
     }
     
@@ -533,7 +534,7 @@ img {
         display: flex;
         flex-direction: column;
         gap: 12px;
-        padding-right: 12px;
+        /* padding-right: 12px; */
     }
     .cart-list-item {
         display: flex;
@@ -559,7 +560,7 @@ img {
         justify-content: space-between;
     }
     .cart-list-wrapper {
-        height: 405px;
+        height: 335px;
         overflow: scroll;
         padding: 4px;
         margin-bottom: 24px;
