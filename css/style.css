@@ -1645,9 +1645,9 @@ img {
     
     
     
-    .delivery-text-wrapper{
+    /* .delivery-text-wrapper{
         width: 1320px;
-    }
+    } */
     
     /* about-us-page */
     .about-us-section{
@@ -1672,6 +1672,12 @@ img {
     /* about-us-page */
     
     /* payment-deliwery */
+    .payment-delivery-section .container{
+        max-width: 450px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
     .delivery-text-title{
         margin-bottom: 12px;
         font-size: 28px;
@@ -1685,17 +1691,17 @@ img {
         flex-direction: column;
         gap: 4px;
         font-size: 18px;
-        margin-left: 64px;
+        margin-left: 32px;
         margin-bottom: 12px;
     }
     .payment-subsubtitle-text{
-        text-indent: 48px;
+        text-indent: 32px;
         font-size: 18px;
         margin-bottom: 4px;
         
     }
     .payment-text-subsubtitle{
-        margin-left: 48px;
+        margin-left: 32px;
         margin-bottom: 4px;
     }
     .delivery-item{
