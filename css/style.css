@@ -498,7 +498,7 @@ img {
         border-radius: 8px;
         padding: 24px;
         position: relative;
-        max-width: 380px;
+        max-width: 340px;
         height: 600px;
         background-color: white;
         padding-left: 36px;
@@ -580,8 +580,11 @@ img {
     
     .counter-decrement,
     .counter-increment {
-        width: 32px;
-        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
         border: none;
         border-radius: 50%;
         background-color: rgba(0, 128, 0, 0.71);
@@ -590,8 +593,11 @@ img {
         color: white;
     }
     .remove-button {
-        width: 32px;
-        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
         border: none;
         border-radius: 50%;
         background-color: red;
