@@ -69,3 +69,8 @@ function oncloseModalBtnClick() {
     document.body.style.overflow = "visible";
     backdrop.classList.remove("active");
 }
+const mobileMenu = document.querySelector(".mobile-menu-burger");
+
+window.addEventListener("beforeunload", function (event) {
+    mobileMenu.classList.add("hidden");
+});

@@ -100,23 +100,25 @@ function randomOrderNumber() {
     return newResult;
 }
 
-form.addEventListener("change", onFormChange);
-function onFormChange(event) {
-    console.log("change");
-    if (
-        event.currentTarget.elements.name.value !== "" &&
-        event.currentTarget.elements.surname.value !== "" &&
-        event.currentTarget.elements.tel.value !== "" &&
-        event.currentTarget.elements.email.value !== "" &&
-        event.currentTarget.elements.department.value !== "" &&
-        event.currentTarget.elements.address.value === ""
-    ) {
-        console.log("1111111");
-        console.log(event.currentTarget.elements.address.value);
+// form.addEventListener("change", onFormChange);
+// function onFormChange(event) {
+//     console.log("change");
+//     if (
+//         event.currentTarget.elements.name.value !== "" &&
+//         event.currentTarget.elements.surname.value !== "" &&
+//         event.currentTarget.elements.tel.value !== "" &&
+//         event.currentTarget.elements.email.value !== "" &&
+//         event.currentTarget.elements.department.value !== "" &&
+//         event.currentTarget.elements.address.value === ""
+//     ) {
+//         console.log("1111111");
+//         console.log(event.currentTarget.elements.address.value);
 
-        mainOrderBtn.classList.remove("disabled");
-    }
-}
+//         mainOrderBtn.classList.remove("disabled");
+//     }
+// }
+
+let active = false;
 
 form.addEventListener("input", onInputChange);
 function onInputChange(event) {
@@ -128,6 +130,14 @@ function onInputChange(event) {
         event.target.style.borderColor = "red";
         event.target.style.backgroundColor = "rgba(255, 0, 0, 0.06)";
         // event.target.nextElementSibling.classList.add("show-error")
+    }
+    if (
+        event.currentTarget.elements.name.value !== "" &&
+        event.currentTarget.elements.surname.value !== "" &&
+        event.currentTarget.elements.tel.value !== "" &&
+        event.currentTarget.elements.email.value !== ""
+    ) {
+        active = true;
     }
     if (
         event.currentTarget.elements.name.value !== "" &&
@@ -183,7 +193,7 @@ function onOrderFormSubmit(event) {
             ? `Населений пункт: ${form.elements.city.value}\n№ Відділення: ${form.elements.department.value}\n`
             : `Точна адреса: ${form.elements.address.value}\n`;
     const orderNumber = randomOrderNumber();
-
+    console.log(form.elements);
     let message = `Замовлення №${orderNumber}\n`;
     message += `${orderMessage}`;
     message += `Імʼя: ${form.elements.name.value}\n`;
@@ -221,6 +231,7 @@ function onOrderFormSubmit(event) {
         backdropOrder.classList.remove("active-order");
         modal.classList.remove("show-min-modal");
         form.classList.remove("hide");
+        document.body.style.overflow = "visible";
         orderListWrapper.classList.remove("hide");
         orderNotifWrapper.classList.remove("show-order-notif");
     });
@@ -474,6 +485,9 @@ function onAddressesItemClick(event) {
         addressesInput.value = event.target.textContent;
     }
     addressesList.classList.remove("show-addresses");
+    if (active) {
+        mainOrderBtn.classList.remove("disabled");
+    }
 }
 
 locationInput.addEventListener("input", onLocationInputChange);

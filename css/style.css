@@ -276,8 +276,8 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
-        top: -30px;
-        left: -30px;
+        top: 0 px;
+        left: 0 px;
         /* border: 1px solid black; */
         border-radius: 50%;
         width: 80px;
@@ -1017,7 +1017,7 @@ img {
     }
 
     .show-min-modal {
-        width: 420px;
+        width: 312x;
         height: 228px;
         padding: 20px;
     }
@@ -1025,12 +1025,12 @@ img {
     .order-notif-wrapper {
         display: none;
         flex-direction: column;
-        gap: 24px;
+        gap: 15px;
         align-items: center;
     }
 
     .order-notification {
-        font-size: 24px;
+        font-size: 20px;
         text-align: center;
         margin-bottom: 8px;
     }
@@ -2341,7 +2341,7 @@ img {
         justify-content: center;
         align-items: center;
         background-color: rgba(0, 0, 0, 0.5);
-        z-index: 15;
+        z-index: 15000000;
         display: none;
     }
     .modal-order {
