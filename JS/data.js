@@ -491,7 +491,7 @@ export const ncEnergyPowerStation = [
         },
 
         images: {
-            imgFace: "../images/nc-energy-3.png",
+            imgFace: "/images/nc-energy-3.png",
             imgProf: "",
         },
 
