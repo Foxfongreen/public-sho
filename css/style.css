@@ -719,7 +719,7 @@ img {
         padding: 8px 0px;
     }
     .table-row:nth-child(even) {
-        background-color: green;
+        background-color: rgb(207, 233, 216);
     }
     .good-price {
         display: inline-block;

@@ -434,7 +434,7 @@ export const ncEnergyPowerStation = [
         power: "3",
         article: "#1017",
         name: "NC ENERGY NCE3P3U24ua",
-        type: "Інверторний",
+        controlType: "Інверторний",
         compatibility:
             "Електромережа/генератор/сонячні панелі/побутова техніка",
         weight: "36кг",
@@ -491,7 +491,7 @@ export const ncEnergyPowerStation = [
         },
 
         images: {
-            imgFace: "./../images/nc-energy-3.png",
+            imgFace: "/../images/nc-energy-3.png",
             imgProf: "",
         },
 
@@ -513,7 +513,7 @@ export const ncEnergyPowerStation = [
         btiIdx: "index-electrostation-nc-clima-3_5",
         name: "NC ENERGY NCE3S5U24ua",
         power: "3,5",
-        type: "Інверторний",
+        controlType: "Інверторний",
         compatibility:
             "Електромережа/генератор/сонячні панелі/побутова техніка",
         weight: "36кг",
@@ -591,7 +591,7 @@ export const ncEnergyPowerStation = [
         btiIdx: "index-electrostation-nc-clima-5_2",
         name: "NC ENERGY NCE5P5U48ua",
         power: "5,2",
-        type: "Інверторний",
+        controlType: "Інверторний",
         compatibility:
             "Електромережа/генератор/сонячні панелі/побутова техніка",
         weight: "36кг",
@@ -669,14 +669,14 @@ export const ncEnergyPowerStation = [
         article: "#1020",
         name: "NC ENERGY NCE5S10U48ua",
         power: "5,5",
-        type: "Інверторний",
+        controlType: "Інверторний",
         compatibility:
             "Електромережа/генератор/сонячні панелі/побутова техніка",
         weight: "36кг",
         battery: "LiFePO4",
         price: "170999",
         discount: "-",
-        available: true,
+        available: false,
         description: "Потужні зарядні станції 5.5 кВт - серія NCE5S10U48ua",
         outputInterfaces:
             "USB-A/RS485 (підключення до ПК)/USB Wi-Fi (для живлення роутера)/Type-C/ USB 5V x 4 pcs/DC 12V x 2 (вихід постійного струму)/AC x 3 pcs",
