@@ -570,7 +570,7 @@ export const ncEnergyPowerStation = [
         },
 
         images: {
-            imgFace: "./../images/NC-energy-3-5.png",
+            imgFace: "images/NC-energy-3-5.png",
             imgProf: "",
         },
 
@@ -648,7 +648,7 @@ export const ncEnergyPowerStation = [
         },
 
         images: {
-            imgFace: "./../images/nc-clima-enerhy-station-5-2.png",
+            imgFace: "images/nc-clima-enerhy-station-5-2.png",
             imgProf: "",
         },
 
@@ -725,7 +725,7 @@ export const ncEnergyPowerStation = [
         },
 
         images: {
-            imgFace: "./../images/nc-clima-energy-station-5-5.png",
+            imgFace: "images/nc-clima-energy-station-5-5.png",
             imgProf: "",
         },
 

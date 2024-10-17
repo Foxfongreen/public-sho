@@ -34,7 +34,7 @@ const createMarkup = (goods) => {
                                     Потужність, кВт ${item.power}  
                                 </p>
                                  <p class="min-tec-spec">
-                                    Тип управління ${item.type}
+                                    Тип управління ${item.controlType}
                                 </p>
                                 <p class="price">${item.price}₴</p>
                             </div>
