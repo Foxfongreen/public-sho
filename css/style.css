@@ -718,8 +718,8 @@ img {
     .table-data {
         padding: 8px 0px;
     }
-    .table-row {
-        border-bottom: 1px solid black;
+    .table-row:nth-child(even) {
+        background-color: green;
     }
     .good-price {
         display: inline-block;
@@ -2229,8 +2229,8 @@ img {
     .table-data {
         padding: 8px 0px;
     }
-    .table-row {
-        border-bottom: 1px solid black;
+    .table-row:nth-child(even) {
+        background-color: rgb(207, 233, 216);
     }
     .good-price {
         display: inline-block;

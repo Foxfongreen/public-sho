@@ -425,6 +425,319 @@ export const bergenAirConditioners = [
     },
 ];
 
-export const rodaHeatConvectors = [{
+export const rodaHeatConvectors = [{}];
 
-}]
+export const ncEnergyPowerStation = [
+    {
+        id: 61,
+        btiIdx: "index-electrostation-nc-clima-3",
+        power: "3",
+        article: "#1017",
+        name: "NC ENERGY NCE3P3U24ua",
+        type: "Інверторний",
+        compatibility:
+            "Електромережа/генератор/сонячні панелі/побутова техніка",
+        weight: "36кг",
+        battery: "LiFePO4",
+        price: "50999",
+        discount: "-",
+        available: true,
+        description:
+            "Інверторна портативна зарядна станція на 3 кВт - NCE3P3U24ua",
+        outputInterfaces:
+            "USB-A/RS485 (підключення до ПК)/USB Wi-Fi (для живлення роутера)/Type-C/ USB 5V x 4 pcs/DC 12V x 2 (вихід постійного струму)/AC x 3 pcs",
+        chargingTime: "≥2",
+        dimensions: "522/655/382",
+        inverterCharacteristics: {
+            signalShape: "Чиста синусоїда",
+            regulationOutputVoltage: "230В ±5%",
+            outputFrequency: "50/60 (±0,2Гц)",
+            peakEfficiency: "90%",
+            standbyConsumption: "0,025кВт",
+        },
+        pvFotoModulesInput: {
+            maximumChargeCurrent: "60 (±3)А",
+            maximumCombinedChargeCurrent: "80 (±4)А",
+            outputFrequency: "50/60 (±0,2)Гц",
+            maximumEfficiency: "98%",
+            noLoadVoltagePhotovoltaicModules: "145В",
+            mpptVoltageRange: "30 ~ 120В",
+        },
+        aCInput: {
+            regulationOfInputVoltage: "230В ±5%",
+            inputVoltageRange: "90 – 280В",
+            nominalInputFrequency: "50/60Гц (автоматичне визначення)",
+            transmissionTime:
+                "10 мс типовий (ДБЖ)/20 мс типовий (електроприлади)",
+            maximumAlternatingChargeCurrent: "30 (±4)А",
+        },
+        lithiumBatteryData: {
+            nominalVoltage: "25,6В",
+            batteryCapacity: "125 А·год/3,5 кВт·год",
+            nominalDischargeCurrent: "140А",
+            workingTemperature: "60С (розряду)",
+        },
+        featuresAndGeneralDescription: {
+            overloadProtection: "+",
+            overHeatingProtection: "+",
+            shortCircuitProtection: "+",
+            type: "Мобільна система",
+            installation: "Не потребує монтажу",
+            guarantee: "24 міс.",
+            color: "Білий",
+            madeIn: "Китай",
+            Plant: "MUST ENERGY",
+            completeSet: "",
+        },
+
+        images: {
+            imgFace: "./../images/nc-energy-3.png",
+            imgProf: "",
+        },
+
+        downloads: {
+            userManual: "",
+        },
+
+        // availability: true,
+        // stock: 25,
+        // ratings: {
+        //     average: 4.7,
+        //     reviews: 145,
+        // },
+    },
+
+    {
+        id: 62,
+        article: "#1018",
+        btiIdx: "index-electrostation-nc-clima-3_5",
+        name: "NC ENERGY NCE3S5U24ua",
+        power: "3,5",
+        type: "Інверторний",
+        compatibility:
+            "Електромережа/генератор/сонячні панелі/побутова техніка",
+        weight: "36кг",
+        battery: "LiFePO4",
+        price: "99999",
+        discount: "-",
+        available: true,
+        description:
+            "Зарядна станція повербанк NCE3S5U24ua - Зарядна станція 3,5 кВт",
+        outputInterfaces:
+            "USB-A/RS485 (підключення до ПК)/USB Wi-Fi (для живлення роутера)/Type-C/ USB 5V x 4 pcs/DC 12V x 2 (вихід постійного струму)/AC x 3 pcs",
+        chargingTime: "≥2",
+        dimensions: "522/655/382мм",
+        inverterCharacteristics: {
+            signalShape: "Чиста синусоїда",
+            regulationOutputVoltage: "230В ±5%",
+            outputFrequency: "50/60 (±0,2Гц)",
+            peakEfficiency: "90%",
+            standbyConsumption: "0,025кВт",
+        },
+        pvFotoModulesInput: {
+            maximumChargeCurrent: "60 (±3)А",
+            maximumCombinedChargeCurrent: "80 (±4)А",
+            outputFrequency: "50/60 (±0,2)Гц",
+            maximumEfficiency: "98%",
+            noLoadVoltagePhotovoltaicModules: "145В",
+            mpptVoltageRange: "30 ~ 120В",
+        },
+        aCInput: {
+            regulationOfInputVoltage: "230В ±5%",
+            inputVoltageRange: "90 – 280В",
+            nominalInputFrequency: "50/60Гц (автоматичне визначення)",
+            transmissionTime:
+                "10 мс типовий (ДБЖ)/20 мс типовий (електроприлади)",
+            maximumAlternatingChargeCurrent: "30 (±4)А",
+        },
+        lithiumBatteryData: {
+            nominalVoltage: "25,6В",
+            batteryCapacity: "125 А·год/3,5 кВт·год",
+            nominalDischargeCurrent: "140А",
+            workingTemperature: "60С (розряду)",
+        },
+        featuresAndGeneralDescription: {
+            overloadProtection: "+",
+            overHeatingProtection: "+",
+            shortCircuitProtection: "+",
+            type: "Мобільна система",
+            installation: "Не потребує монтажу",
+            guarantee: "24 міс.",
+            color: "Білий",
+            madeIn: "Китай",
+            Plant: "MUST ENERGY",
+            completeSet: "",
+        },
+
+        images: {
+            imgFace: "./../images/NC-energy-3-5.png",
+            imgProf: "",
+        },
+
+        downloads: {
+            userManual: "",
+        },
+
+        // availability: true,
+        // stock: 25,
+        // ratings: {
+        //     average: 4.7,
+        //     reviews: 145,
+        // },
+    },
+    {
+        id: 63,
+        article: "#1019",
+        btiIdx: "index-electrostation-nc-clima-5_2",
+        name: "NC ENERGY NCE5P5U48ua",
+        power: "5,2",
+        type: "Інверторний",
+        compatibility:
+            "Електромережа/генератор/сонячні панелі/побутова техніка",
+        weight: "36кг",
+        battery: "LiFePO4",
+        price: "99999",
+        discount: "-",
+        available: true,
+        description:
+            "Зарядна станція повербанк NCE3S5U24ua - Зарядна станція 3,5 кВт",
+        outputInterfaces:
+            "USB-A/RS485 (підключення до ПК)/USB Wi-Fi (для живлення роутера)/Type-C/ USB 5V x 4 pcs/DC 12V x 2 (вихід постійного струму)/AC x 3 pcs",
+        chargingTime: "≥2 год.",
+        dimensions: "522/655/382мм",
+        inverterCharacteristics: {
+            signalShape: "Чиста синусоїда",
+            regulationOutputVoltage: "230В ±5%",
+            outputFrequency: "50/60 (±0,2Гц)",
+            peakEfficiency: "90%",
+            standbyConsumption: "0,025кВт",
+        },
+        pvFotoModulesInput: {
+            maximumChargeCurrent: "60 (±3)А",
+            maximumCombinedChargeCurrent: "80 (±4)А",
+            outputFrequency: "50/60 (±0,2)Гц",
+            maximumEfficiency: "98%",
+            noLoadVoltagePhotovoltaicModules: "145В",
+            mpptVoltageRange: "30 ~ 120В",
+        },
+        aCInput: {
+            regulationOfInputVoltage: "230В ±5%",
+            inputVoltageRange: "90 – 280В",
+            nominalInputFrequency: "50/60Гц (автоматичне визначення)",
+            transmissionTime:
+                "10 мс типовий (ДБЖ)/20 мс типовий (електроприлади)",
+            maximumAlternatingChargeCurrent: "30 (±4)А",
+        },
+        lithiumBatteryData: {
+            nominalVoltage: "25,6В",
+            batteryCapacity: "125 А·год/3,5 кВт·год",
+            nominalDischargeCurrent: "140А",
+            workingTemperature: "60С (розряду)",
+        },
+        featuresAndGeneralDescription: {
+            overloadProtection: "+",
+            overHeatingProtection: "+",
+            shortCircuitProtection: "+",
+            type: "Мобільна система",
+            installation: "Не потребує монтажу",
+            guarantee: "24 міс.",
+            color: "Білий",
+            madeIn: "Китай",
+            Plant: "MUST ENERGY",
+            completeSet: "",
+        },
+
+        images: {
+            imgFace: "./../images/nc-clima-enerhy-station-5-2.png",
+            imgProf: "",
+        },
+
+        downloads: {
+            userManual: "",
+        },
+
+        // availability: true,
+        // stock: 25,
+        // ratings: {
+        //     average: 4.7,
+        //     reviews: 145,
+        // },
+    },
+    {
+        id: 64,
+        btiIdx: "index-electrostation-nc-clima-5_5",
+        article: "#1020",
+        name: "NC ENERGY NCE5S10U48ua",
+        power: "5,5",
+        type: "Інверторний",
+        compatibility:
+            "Електромережа/генератор/сонячні панелі/побутова техніка",
+        weight: "36кг",
+        battery: "LiFePO4",
+        price: "170999",
+        discount: "-",
+        available: true,
+        description: "Потужні зарядні станції 5.5 кВт - серія NCE5S10U48ua",
+        outputInterfaces:
+            "USB-A/RS485 (підключення до ПК)/USB Wi-Fi (для живлення роутера)/Type-C/ USB 5V x 4 pcs/DC 12V x 2 (вихід постійного струму)/AC x 3 pcs",
+        chargingTime: "≥2 год.",
+        dimensions: "522/655/382мм",
+        inverterCharacteristics: {
+            signalShape: "Чиста синусоїда",
+            regulationOutputVoltage: "230В ±5%",
+            outputFrequency: "50/60 (±0,2Гц)",
+            peakEfficiency: "90%",
+            standbyConsumption: "0,025кВт",
+        },
+        pvFotoModulesInput: {
+            maximumChargeCurrent: "60 (±3)А",
+            maximumCombinedChargeCurrent: "80 (±4)А",
+            outputFrequency: "50/60 (±0,2)Гц",
+            maximumEfficiency: "98%",
+            noLoadVoltagePhotovoltaicModules: "145В",
+            mpptVoltageRange: "30 ~ 120В",
+        },
+        aCInput: {
+            regulationOfInputVoltage: "230В ±5%",
+            inputVoltageRange: "90 – 280В",
+            nominalInputFrequency: "50/60Гц (автоматичне визначення)",
+            transmissionTime:
+                "10 мс типовий (ДБЖ)/20 мс типовий (електроприлади)",
+            maximumAlternatingChargeCurrent: "30 (±4)А",
+        },
+        lithiumBatteryData: {
+            nominalVoltage: "25,6В",
+            batteryCapacity: "125 А·год/3,5 кВт·год",
+            nominalDischargeCurrent: "140А",
+            workingTemperature: "60С (розряду)",
+        },
+        featuresAndGeneralDescription: {
+            overloadProtection: "+",
+            overHeatingProtection: "+",
+            shortCircuitProtection: "+",
+            type: "Мобільна система",
+            installation: "Не потребує монтажу",
+            guarantee: "24 міс.",
+            color: "Білий",
+            madeIn: "Китай",
+            Plant: "MUST ENERGY",
+            completeSet: "",
+        },
+
+        images: {
+            imgFace: "./../images/nc-clima-energy-station-5-5.png",
+            imgProf: "",
+        },
+
+        downloads: {
+            userManual: "",
+        },
+
+        // availability: true,
+        // stock: 25,
+        // ratings: {
+        //     average: 4.7,
+        //     reviews: 145,
+        // },
+    },
+];
